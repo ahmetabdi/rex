@@ -53,5 +53,5 @@ config :rex, Rex.Repo,
   username: "postgres",
   password: "postgres",
   database: "rex_dev",
-  hostname: "localhost",
+  hostname: System.get_env("DB_HOST") || "localhost",
   pool_size: 10
